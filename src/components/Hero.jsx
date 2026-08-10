@@ -1,5 +1,8 @@
 
+
 // The Hero is the big welcome banner at the top of the home page.
+// Today the two buttons become real links that move to the Menu page.
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section className="hero" id="home">
@@ -15,15 +18,14 @@ function Hero() {
           Order from the best kitchens in your city. Hot food, honest prices,
           and no waiting on phone calls.
         </p>
-
         <div className="hero-buttons">
-          <a className="btn btn-primary" href="#menu">Order Now</a>
-          <a className="btn btn-ghost" href="#menu">See Menu</a>
+          <Link className="btn btn-primary" to="/menu">Order Now</Link>
+          <Link className="btn btn-ghost" to="/menu">See Menu</Link>
         </div>
       </div>
       {/* Right half - the picture */}
       <div className="hero-art">
-        <img className="hero-icmage" src="/public/paneer.jpg" alt="Soft paneer cubes in a creamy tomato gravy" />
+        <img className="hero-image" src="Images/paneer.jpg" alt="Soft paneer cubes in a creamy tomato gravy" />
       </div>
     </section>
   );
